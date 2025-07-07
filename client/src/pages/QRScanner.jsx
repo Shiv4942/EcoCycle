@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { QrReader } from 'react-qr-reader';
+import WebcamQRScanner from '../components/WebcamQRScanner';
 import { QrCode, Package, User, MapPin, Calendar, CheckCircle, XCircle, Upload, Camera } from 'lucide-react';
 import jsQR from 'jsqr';
 import api from '../services/api';
@@ -195,11 +195,7 @@ const QRScanner = () => {
                 
                 <div className="flex justify-center">
                   <div className="w-full max-w-md">
-                    <QrReader
-                      onResult={handleScan}
-                      constraints={{ facingMode: 'environment' }}
-                      className="w-full"
-                    />
+                    <WebcamQRScanner onScan={handleScan} scanning={scanning} loading={loading} />
                   </div>
                 </div>
               </div>
