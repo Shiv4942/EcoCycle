@@ -1,33 +1,30 @@
 {
-  "name": "server",
+  "name": "ecocycle-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "EcoCycle E-Waste Management Platform Backend",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "create-admin": "node scripts/createAdmin.js",
-    "generate-password": "node scripts/generatePassword.js",
-    "update-product-status": "node scripts/updateProductStatus.js",
-    "add-sample-products": "node scripts/addSampleProducts.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "echo 'No build step required for Node.js'"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "keywords": ["ewaste", "recycling", "mongodb", "express", "nodejs"],
+  "author": "Shiv4942",
+  "license": "MIT",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0",
     "cors": "^2.8.5",
-    "dotenv": "^17.0.1",
-    "express": "^4.21.2",
+    "dotenv": "^16.3.1",
+    "bcryptjs": "^2.4.3",
     "jsonwebtoken": "^9.0.2",
-    "mongodb": "^6.17.0",
-    "mongoose": "^8.16.1",
-    "multer": "^1.4.5-lts.1",
-    "qrcode": "^1.5.3"
+    "qrcode": "^1.5.3",
+    "multer": "^1.4.5-lts.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
