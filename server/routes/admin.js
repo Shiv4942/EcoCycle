@@ -138,7 +138,7 @@ router.patch('/users/:id/toggle-status', auth, authorize('admin'), async (req, r
 });
 
 // Get admin dashboard stats
-router.get('/dashboard/stats', auth, authorize('admin'), async (req, res) => {
+router.get('/dashboard/stats', auth, authorize('admin' , 'ngo'), async (req, res) => {
   try {
     const PickupRequest = require('../models/PickupRequest');
     const Product = require('../models/Product');
