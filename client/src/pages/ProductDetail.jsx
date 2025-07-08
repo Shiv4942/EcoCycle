@@ -214,7 +214,7 @@ const ProductDetail = () => {
             {canEdit && (
               <>
                 <button
-                  onClick={() => navigate(`/products/edit/${id}`)}
+                  onClick={() => navigate(`/api/products/edit/${id}`)}
                   className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   Edit Product

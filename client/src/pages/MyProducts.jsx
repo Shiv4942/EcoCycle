@@ -86,7 +86,7 @@ const MyProducts = () => {
             <h1 className="text-2xl font-bold text-gray-900">My Products</h1>
           </div>
           <Link
-            to="/products/add"
+            to="/api/products/add"
             className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
           >
             Add New Product
@@ -99,7 +99,7 @@ const MyProducts = () => {
             <h2 className="text-xl font-semibold text-gray-900 mb-2">No Products Yet</h2>
             <p className="text-gray-600 mb-6">You haven't added any products to the marketplace yet.</p>
             <Link
-              to="/products/add"
+              to="/api/products/add"
               className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
             >
               Add Your First Product
@@ -216,7 +216,7 @@ const MyProducts = () => {
                     {/* Action Buttons */}
                     <div className="flex space-x-2">
                       <Link
-                        to={`/products/${product._id}`}
+                        to={`/api/products/${product._id}`}
                         className="flex-1 bg-blue-600 text-white px-3 py-2 rounded text-sm hover:bg-blue-700 transition-colors text-center"
                       >
                         View
@@ -224,7 +224,7 @@ const MyProducts = () => {
                       
                       {product.status === 'available' && (
                         <Link
-                          to={`/products/edit/${product._id}`}
+                          to={`/api/products/edit/${product._id}`}
                           className="bg-yellow-600 text-white px-3 py-2 rounded text-sm hover:bg-yellow-700 transition-colors"
                         >
                           <Edit className="h-4 w-4" />

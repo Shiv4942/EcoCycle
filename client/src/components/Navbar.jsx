@@ -117,7 +117,7 @@ const Navbar = () => {
                         My Pickups
                       </Link>
                       <Link 
-                        to="/products/add" 
+                        to="/api/products/add" 
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                         onClick={closeDropdown}
                       >
@@ -125,7 +125,7 @@ const Navbar = () => {
                         Add Product
                       </Link>
                       <Link 
-                        to="/products/my-products" 
+                        to="/api/products/my-products" 
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                         onClick={closeDropdown}
                       >
@@ -133,7 +133,7 @@ const Navbar = () => {
                         My Products
                       </Link>
                       <Link 
-                        to="/products/sold" 
+                        to="/api/products/sold" 
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                         onClick={closeDropdown}
                       >
@@ -244,21 +244,21 @@ const Navbar = () => {
                   My Pickups
                 </Link>
                 <Link
-                  to="/products/add"
+                  to="/api/products/add"
                   className="block hover:bg-green-700 px-4 py-3 rounded-md text-lg font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Add Product
                 </Link>
                 <Link
-                  to="/products/my-products"
+                  to="/api/products/my-products"
                   className="block hover:bg-green-700 px-4 py-3 rounded-md text-lg font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   My Products
                 </Link>
                 <Link
-                  to="/products/sold"
+                  to="/api/products/sold"
                   className="block hover:bg-green-700 px-4 py-3 rounded-md text-lg font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >

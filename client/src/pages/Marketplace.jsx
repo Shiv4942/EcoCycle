@@ -30,7 +30,7 @@ const Marketplace = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await api.get('/products/categories/list');
+      const response = await api.get('/api/products/categories/list');
       setCategories(response.data);
     } catch (error) {
       console.error('Error fetching categories:', error);
@@ -46,7 +46,7 @@ const Marketplace = () => {
         limit: 12
       });
       
-      const response = await api.get(`/products?${params}`);
+      const response = await api.get(`/api/products?${params}`);
       setProducts(response.data.products);
       setTotalPages(response.data.totalPages);
     } catch (error) {
@@ -202,7 +202,7 @@ const Marketplace = () => {
           {products.map((product) => (
             <Link
               key={product._id}
-              to={`/products/${product._id}`}
+              to={`/api/products/${product._id}`}
               className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow"
             >
               <div className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-t-lg">
@@ -259,7 +259,7 @@ const Marketplace = () => {
           {products.map((product) => (
             <Link
               key={product._id}
-              to={`/products/${product._id}`}
+              to={`/api/products/${product._id}`}
               className="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow p-4 flex"
             >
               <div className="w-32 h-32 bg-gray-200 rounded-lg mr-4 flex-shrink-0">

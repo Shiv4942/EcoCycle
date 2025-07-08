@@ -33,7 +33,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/marketplace" element={<Marketplace />} />
-              <Route path="/products/:id" element={<ProductDetail />} />
+              <Route path="/api/products/:id" element={<ProductDetail />} />
               
               {/* Protected Routes */}
               <Route path="/dashboard" element={
@@ -63,7 +63,7 @@ function App() {
                   <QRCodeDisplay />
                 </ProtectedRoute>
               } />
-              <Route path="/products/add" element={
+              <Route path="/api/products/add" element={
                 <ProtectedRoute>
                   <AddProduct />
                 </ProtectedRoute>
@@ -90,12 +90,12 @@ function App() {
                   <AdminUsers />
                 </ProtectedRoute>
               } />
-              <Route path="/products/sold" element={
+              <Route path="/api/products/sold" element={
                 <ProtectedRoute>
                   <SoldProducts />
                 </ProtectedRoute>
               } />
-              <Route path="/products/my-products" element={
+              <Route path="/api/products/my-products" element={
                 <ProtectedRoute>
                   <MyProducts />
                 </ProtectedRoute>

@@ -26,7 +26,7 @@ const Dashboard = () => {
       const pickups = pickupsResponse.data;
       
       // Fetch user's products
-      const productsResponse = await api.get('/products/my-products');
+      const productsResponse = await api.get('/api/products/my-products');
       const products = productsResponse.data;
 
       // Calculate stats
@@ -126,7 +126,7 @@ const Dashboard = () => {
               Schedule Pickup
             </Link>
             <Link
-              to="/products/add"
+              to="/api/products/add"
               className="flex items-center p-3 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors"
             >
               <ShoppingBag className="h-5 w-5 mr-3" />
