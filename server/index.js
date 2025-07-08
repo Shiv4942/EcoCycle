@@ -8,7 +8,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: "*",
+  origin: "https://eco-cycle-sage.vercel.app/",
   credentials: true
 }));
 app.use(express.json());
