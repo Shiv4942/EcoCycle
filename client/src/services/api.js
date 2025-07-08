@@ -46,23 +46,23 @@ export const updatePickup = (id, pickupData) => api.put(`/api/pickup/${id}`, pic
 export const deletePickup = (id) => api.delete(`/api/pickup/${id}`);
 
 // Product API functions
-export const getProducts = () => api.get('/products');
-export const getProduct = (id) => api.get(`/products/${id}`);
-export const createProduct = (productData) => api.post('/products', productData);
-export const updateProduct = (id, productData) => api.put(`/products/${id}`, productData);
-export const deleteProduct = (id) => api.delete(`/products/${id}`);
-export const buyProduct = (id) => api.post(`/products/${id}/buy`);
-export const getSoldProducts = (page = 1) => api.get(`/products/sold?page=${page}`);
-export const getMyProducts = () => api.get('/products/my-products');
+export const getProducts = () => api.get('/api/products');
+export const getProduct = (id) => api.get(`/api/products/${id}`);
+export const createProduct = (productData) => api.post('/api/products', productData);
+export const updateProduct = (id, productData) => api.put(`/api/products/${id}`, productData);
+export const deleteProduct = (id) => api.delete(`/api/products/${id}`);
+export const buyProduct = (id) => api.post(`/api/products/${id}/buy`);
+export const getSoldProducts = (page = 1) => api.get(`/api/products/sold?page=${page}`);
+export const getMyProducts = () => api.get('/api/products/my-products');
 
 // Admin API functions
-export const getUsers = (params) => api.get('/admin/users', { params });
-export const getUser = (id) => api.get(`/admin/users/${id}`);
-export const updateUser = (id, userData) => api.put(`/admin/users/${id}`, userData);
-export const deleteUser = (id) => api.delete(`/admin/users/${id}`);
-export const toggleUserStatus = (id) => api.patch(`/admin/users/${id}/toggle-status`);
-export const getAdminStats = () => api.get('/admin/stats');
-export const getAdminDashboardStats = () => api.get('/admin/dashboard/stats');
+export const getUsers = (params) => api.get('/api/admin/users', { params });
+export const getUser = (id) => api.get(`/api/admin/users/${id}`);
+export const updateUser = (id, userData) => api.put(`/api/admin/users/${id}`, userData);
+export const deleteUser = (id) => api.delete(`/api/admin/users/${id}`);
+export const toggleUserStatus = (id) => api.patch(`/api/admin/users/${id}/toggle-status`);
+export const getAdminStats = () => api.get('/api/admin/stats');
+export const getAdminDashboardStats = () => api.get('/api/admin/dashboard/stats');
 export const getRecentPickups = () => api.get('/api/pickup/recent');
 
 export default api; 
