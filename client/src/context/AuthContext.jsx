@@ -52,7 +52,7 @@ export const AuthProvider = ({ children }) => {
       if (user.role === 'admin') {
         navigate('/api/admin/dashboard');
       } else {
-        navigate('/api/dashboard');
+        navigate('/dashboard');
       }
       return { success: true };
     } catch (error) {
@@ -76,7 +76,7 @@ export const AuthProvider = ({ children }) => {
       if (user.role === 'admin') {
         navigate('/api/admin/dashboard');
       } else {
-        navigate('/api/dashboard');
+        navigate('/dashboard');
       }
       return { success: true };
     } catch (error) {
