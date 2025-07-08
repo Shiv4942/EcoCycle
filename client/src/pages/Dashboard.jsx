@@ -22,7 +22,7 @@ const Dashboard = () => {
   const fetchDashboardData = async () => {
     try {
       // Fetch user's pickups
-      const pickupsResponse = await api.get('/pickup/my-pickups');
+      const pickupsResponse = await api.get('/api/pickup/my-pickups');
       const pickups = pickupsResponse.data;
       
       // Fetch user's products
@@ -119,7 +119,7 @@ const Dashboard = () => {
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
           <div className="space-y-3">
             <Link
-              to="/pickup/new"
+              to="/api/pickup/new"
               className="flex items-center p-3 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors"
             >
               <Package className="h-5 w-5 mr-3" />
@@ -258,7 +258,7 @@ const Dashboard = () => {
                           {pickup.status}
                         </span>
                         <Link
-                          to={`/pickup/${pickup._id}`}
+                          to={`/api/pickup/${pickup._id}`}
                           className="text-green-600 hover:text-green-700 text-sm font-medium"
                         >
                           View Details
@@ -272,7 +272,7 @@ const Dashboard = () => {
                   <Package className="h-12 w-12 text-gray-400 mx-auto mb-4" />
                   <p className="text-gray-500">No pickups yet</p>
                   <Link
-                    to="/pickup/new"
+                    to="/api/pickup/new"
                     className="mt-2 inline-block text-green-600 hover:text-green-700 font-medium"
                   >
                     Schedule your first pickup
@@ -283,7 +283,7 @@ const Dashboard = () => {
               {recentPickups.length > 0 && (
                 <div className="mt-6 text-center">
                   <Link
-                    to="/pickup/my-pickups"
+                    to="/api/pickup/my-pickups"
                     className="text-green-600 hover:text-green-700 font-medium"
                   >
                     View all pickups →

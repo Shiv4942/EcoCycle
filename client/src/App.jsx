@@ -48,17 +48,17 @@ function App() {
                   <AdminDashboard />
                 </ProtectedRoute>
               } />
-              <Route path="/pickup/new" element={
+              <Route path="/api/pickup/new" element={
                 <ProtectedRoute>
                   <PickupForm />
                 </ProtectedRoute>
               } />
-              <Route path="/pickup/my-pickups" element={
+              <Route path="/api/pickup/my-pickups" element={
                 <ProtectedRoute>
                   <PickupList />
                 </ProtectedRoute>
               } />
-              <Route path="/pickup/:id/qr" element={
+              <Route path="/api/pickup/:id/qr" element={
                 <ProtectedRoute>
                   <QRCodeDisplay />
                 </ProtectedRoute>

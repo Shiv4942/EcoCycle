@@ -19,11 +19,11 @@ const QRCodeDisplay = () => {
   const fetchPickupAndQR = async () => {
     try {
       // Fetch pickup details
-      const pickupResponse = await api.get(`/pickup/${id}`);
+      const pickupResponse = await api.get(`/api/pickup/${id}`);
       setPickup(pickupResponse.data);
 
       // Fetch QR code
-      const qrResponse = await api.get(`/pickup/${id}/qr`);
+      const qrResponse = await api.get(`/api/pickup/${id}/qr`);
       setQrCode(qrResponse.data.qrCode);
     } catch (error) {
       console.error('Error fetching pickup and QR code:', error);
@@ -71,7 +71,7 @@ const QRCodeDisplay = () => {
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Pickup Not Found</h1>
           <p className="text-gray-600 mb-6">The pickup request you're looking for doesn't exist.</p>
           <Link
-            to="/pickup/my-pickups"
+            to="/api/pickup/my-pickups"
             className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
@@ -87,7 +87,7 @@ const QRCodeDisplay = () => {
       {/* Header */}
       <div className="mb-8">
         <Link
-          to="/pickup/my-pickups"
+          to="/api/pickup/my-pickups"
           className="inline-flex items-center text-green-600 hover:text-green-700 mb-4"
         >
           <ArrowLeft className="h-4 w-4 mr-2" />

@@ -39,11 +39,11 @@ export const register = (userData) => api.post('/api/auth/register', userData);
 export const getProfile = () => api.get('/api/auth/profile');
 
 // Pickup API functions
-export const createPickup = (pickupData) => api.post('/pickup', pickupData);
-export const getPickups = () => api.get('/pickup');
-export const getPickup = (id) => api.get(`/pickup/${id}`);
-export const updatePickup = (id, pickupData) => api.put(`/pickup/${id}`, pickupData);
-export const deletePickup = (id) => api.delete(`/pickup/${id}`);
+export const createPickup = (pickupData) => api.post('/api/pickup', pickupData);
+export const getPickups = () => api.get('/api/pickup');
+export const getPickup = (id) => api.get(`/api/pickup/${id}`);
+export const updatePickup = (id, pickupData) => api.put(`/api/pickup/${id}`, pickupData);
+export const deletePickup = (id) => api.delete(`/api/pickup/${id}`);
 
 // Product API functions
 export const getProducts = () => api.get('/products');
@@ -63,6 +63,6 @@ export const deleteUser = (id) => api.delete(`/admin/users/${id}`);
 export const toggleUserStatus = (id) => api.patch(`/admin/users/${id}/toggle-status`);
 export const getAdminStats = () => api.get('/admin/stats');
 export const getAdminDashboardStats = () => api.get('/admin/dashboard/stats');
-export const getRecentPickups = () => api.get('/pickup/recent');
+export const getRecentPickups = () => api.get('/api/pickup/recent');
 
 export default api; 

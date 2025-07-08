@@ -71,7 +71,7 @@ const Home = () => {
               ) : (
                 <>
                   <Link
-                    to="/pickup/new"
+                    to="/api/pickup/new"
                     className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"
                   >
                     Schedule Pickup
@@ -460,7 +460,7 @@ const Home = () => {
             </Link>
           ) : (
             <Link
-              to="/pickup/new"
+              to="/api/pickup/new"
               className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-block"
             >
               Schedule Your First Pickup

@@ -102,7 +102,7 @@ const QRScanner = () => {
 
   const processQRCode = async (qrData) => {
     try {
-      const response = await api.post('/pickup/scan', { qrCode: qrData });
+      const response = await api.post('/api/pickup/scan', { qrCode: qrData });
       setScannedData(response.data.pickup);
       toast.success('QR Code processed successfully! Pickup marked as collected.');
     } catch (error) {

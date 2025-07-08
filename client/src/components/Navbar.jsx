@@ -69,7 +69,7 @@ const Navbar = () => {
                     Dashboard
                   </Link>
                 )}
-                <Link to="/pickup/new" className="hover:bg-green-700 px-4 py-3 rounded-md text-base font-medium">
+                <Link to="/api/pickup/new" className="hover:bg-green-700 px-4 py-3 rounded-md text-base font-medium">
                   Schedule Pickup
                 </Link>
                 {(isAdmin || isNGO) && (
@@ -109,7 +109,7 @@ const Navbar = () => {
                         Profile
                       </Link>
                       <Link 
-                        to="/pickup/my-pickups" 
+                        to="/api/pickup/my-pickups" 
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                         onClick={closeDropdown}
                       >
@@ -214,7 +214,7 @@ const Navbar = () => {
                   </Link>
                 )}
                 <Link
-                  to="/pickup/new"
+                  to="/api/pickup/new"
                   className="block hover:bg-green-700 px-4 py-3 rounded-md text-lg font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -237,7 +237,7 @@ const Navbar = () => {
                   Profile
                 </Link>
                 <Link
-                  to="/pickup/my-pickups"
+                  to="/api/pickup/my-pickups"
                   className="block hover:bg-green-700 px-4 py-3 rounded-md text-lg font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >

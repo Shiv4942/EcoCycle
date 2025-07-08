@@ -67,9 +67,9 @@ const PickupForm = () => {
     setLoading(true);
 
     try {
-      const response = await api.post('/pickup', formData);
+      const response = await api.post('/api/pickup', formData);
       toast.success('Pickup request created successfully!');
-      navigate('/pickup/my-pickups');
+      navigate('/api/pickup/my-pickups');
     } catch (error) {
       const message = error.response?.data?.message || 'Failed to create pickup request';
       toast.error(message);

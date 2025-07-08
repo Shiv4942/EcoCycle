@@ -26,7 +26,7 @@ const PickupList = () => {
   const fetchPickups = async () => {
     setLoading(true);
     try {
-      let endpoint = isAdminView ? '/pickup' : '/pickup/my-pickups';
+      let endpoint = isAdminView ? '/api/pickup' : '/api/pickup/my-pickups';
       const params = new URLSearchParams({
         ...filters,
         page: currentPage,
@@ -52,7 +52,7 @@ const PickupList = () => {
 
   const handleStatusUpdate = async (pickupId, newStatus) => {
     try {
-      await api.patch(`/pickup/${pickupId}/status`, { status: newStatus });
+      await api.patch(`/api/pickup/${pickupId}/status`, { status: newStatus });
       toast.success('Status updated successfully');
       fetchPickups();
     } catch (error) {
@@ -135,7 +135,7 @@ const PickupList = () => {
 
           {!isAdminView && (
             <Link
-              to="/pickup/new"
+              to="/api/pickup/new"
               className="btn-primary text-center"
             >
               Schedule New Pickup
@@ -215,7 +215,7 @@ const PickupList = () => {
 
                         <div className="flex items-center space-x-2">
                           <Link
-                            to={`/pickup/${pickup._id}`}
+                            to={`/api/pickup/${pickup._id}`}
                             className="flex items-center text-green-600 hover:text-green-700 text-sm font-medium"
                           >
                             <Eye className="h-4 w-4 mr-1" />
@@ -224,7 +224,7 @@ const PickupList = () => {
                           
                           {pickup.qrCode && (
                             <Link
-                              to={`/pickup/${pickup._id}/qr`}
+                              to={`/api/pickup/${pickup._id}/qr`}
                               className="flex items-center text-blue-600 hover:text-blue-700 text-sm font-medium"
                             >
                               <Package className="h-4 w-4 mr-1" />
@@ -246,7 +246,7 @@ const PickupList = () => {
               </p>
               {!isAdminView && (
                 <Link
-                  to="/pickup/new"
+                  to="/api/pickup/new"
                   className="btn-primary"
                 >
                   Schedule your first pickup
