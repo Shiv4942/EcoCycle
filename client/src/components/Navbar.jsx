@@ -61,7 +61,7 @@ const Navbar = () => {
             {isAuthenticated ? (
               <>
                 {isAdmin ? (
-                  <Link to="/admin/dashboard" className="hover:bg-green-700 px-4 py-3 rounded-md text-base font-medium">
+                  <Link to="/api/admin/dashboard" className="hover:bg-green-700 px-4 py-3 rounded-md text-base font-medium">
                     Admin Dashboard
                   </Link>
                 ) : (
@@ -79,12 +79,12 @@ const Navbar = () => {
                 )}
                 
                 {isAdmin && (
-                  <Link to="/admin/users" className="hover:bg-green-700 px-4 py-3 rounded-md text-base font-medium">
+                  <Link to="/api/admin/users" className="hover:bg-green-700 px-4 py-3 rounded-md text-base font-medium">
                     Manage Users
                   </Link>
                 )}
                 {(isAdmin || isNGO) && (
-                  <Link to="/admin/pickups" className="hover:bg-green-700 px-4 py-3 rounded-md text-base font-medium">
+                  <Link to="/api/admin/pickups" className="hover:bg-green-700 px-4 py-3 rounded-md text-base font-medium">
                     Manage Pickups
                   </Link>
                 )}
@@ -198,7 +198,7 @@ const Navbar = () => {
               <>
                 {isAdmin ? (
                   <Link
-                    to="/admin/dashboard"
+                    to="/api/admin/dashboard"
                     className="block hover:bg-green-700 px-4 py-3 rounded-md text-lg font-medium"
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -267,7 +267,7 @@ const Navbar = () => {
                 
                 {isAdmin && (
                   <Link
-                    to="/admin/users"
+                    to="/api/admin/users"
                     className="block hover:bg-green-700 px-4 py-3 rounded-md text-lg font-medium"
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -276,7 +276,7 @@ const Navbar = () => {
                 )}
                 {(isAdmin || isNGO) && (
                   <Link
-                    to="/admin/pickups"
+                    to="/api/admin/pickups"
                     className="block hover:bg-green-700 px-4 py-3 rounded-md text-lg font-medium"
                     onClick={() => setIsMenuOpen(false)}
                   >

@@ -158,7 +158,7 @@ const AdminDashboard = () => {
       {/* Quick Actions */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <Link
-          to="/admin/users"
+          to="/api/admin/users"
           className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
         >
           <div className="flex items-center">
@@ -173,7 +173,7 @@ const AdminDashboard = () => {
         </Link>
 
         <Link
-          to="/admin/pickups"
+          to="/api/admin/pickups"
           className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
         >
           <div className="flex items-center">

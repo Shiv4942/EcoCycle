@@ -68,14 +68,14 @@ const Dashboard = () => {
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Admin Actions</h3>
             <div className="space-y-3">
               <Link
-                to="/admin/pickups"
+                to="/api/admin/pickups"
                 className="flex items-center p-3 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors"
               >
                 <Package className="h-5 w-5 mr-3" />
                 Manage All Pickups
               </Link>
               <Link
-                to="/admin/users"
+                to="/api/admin/users"
                 className="flex items-center p-3 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors"
               >
                 <Users className="h-5 w-5 mr-3" />
@@ -94,7 +94,7 @@ const Dashboard = () => {
             <h3 className="text-lg font-semibold text-gray-900 mb-4">NGO Actions</h3>
             <div className="space-y-3">
               <Link
-                to="/admin/pickups"
+                to="/api/admin/pickups"
                 className="flex items-center p-3 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors"
               >
                 <Package className="h-5 w-5 mr-3" />

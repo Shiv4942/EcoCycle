@@ -43,7 +43,7 @@ function App() {
               } />
               
               {/* Admin Dashboard */}
-              <Route path="/admin/dashboard" element={
+              <Route path="/api/admin/dashboard" element={
                 <ProtectedRoute allowedRoles={['admin']}>
                   <AdminDashboard />
                 </ProtectedRoute>
@@ -80,12 +80,12 @@ function App() {
               } />
               
               {/* Admin/NGO Routes */}
-              <Route path="/admin/pickups" element={
+              <Route path="/api/admin/pickups" element={
                 <ProtectedRoute allowedRoles={['admin', 'ngo']}>
                   <PickupList />
                 </ProtectedRoute>
               } />
-              <Route path="/admin/users" element={
+              <Route path="/api/admin/users" element={
                 <ProtectedRoute allowedRoles={['admin']}>
                   <AdminUsers />
                 </ProtectedRoute>

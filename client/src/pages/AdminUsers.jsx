@@ -39,7 +39,7 @@ const AdminUsers = () => {
         limit: 10
       });
       
-      const response = await api.get(`/admin/users?${params}`);
+      const response = await api.get(`/api/admin/users?${params}`);
       setUsers(response.data.users);
       setTotalPages(response.data.totalPages);
     } catch (error) {
@@ -65,7 +65,7 @@ const AdminUsers = () => {
 
   const handleUpdateUser = async () => {
     try {
-      await api.put(`/admin/users/${selectedUser._id}`, editForm);
+      await api.put(`/api/admin/users/${selectedUser._id}`, editForm);
       toast.success('User updated successfully');
       setShowEditModal(false);
       fetchUsers();
@@ -78,7 +78,7 @@ const AdminUsers = () => {
     if (!window.confirm('Are you sure you want to delete this user?')) return;
     
     try {
-      await api.delete(`/admin/users/${userId}`);
+      await api.delete(`/api/admin/users/${userId}`);
       toast.success('User deleted successfully');
       fetchUsers();
     } catch (error) {
@@ -88,7 +88,7 @@ const AdminUsers = () => {
 
   const handleToggleStatus = async (userId, currentStatus) => {
     try {
-      await api.patch(`/admin/users/${userId}/toggle-status`);
+      await api.patch(`/api/admin/users/${userId}/toggle-status`);
       toast.success(`User ${currentStatus ? 'deactivated' : 'activated'} successfully`);
       fetchUsers();
     } catch (error) {
