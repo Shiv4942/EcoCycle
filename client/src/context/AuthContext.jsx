@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
       const token = localStorage.getItem('token');
       if (token) {
         api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-        const response = await api.get('/auth/profile');
+        const response = await api.get('/api/auth/profile');
         setUser(response.data.user);
       }
     } catch (error) {
@@ -50,9 +50,9 @@ export const AuthProvider = ({ children }) => {
       toast.success('Login successful!');
       // Redirect based on user role
       if (user.role === 'admin') {
-        navigate('/admin/dashboard');
+        navigate('/api/admin/dashboard');
       } else {
-        navigate('/dashboard');
+        navigate('/api/dashboard');
       }
       return { success: true };
     } catch (error) {
@@ -64,7 +64,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (userData) => {
     try {
-      const response = await api.post('/auth/register', userData);
+      const response = await api.post('/api/auth/register', userData);
       const { token, user } = response.data;
       
       localStorage.setItem('token', token);
@@ -74,9 +74,9 @@ export const AuthProvider = ({ children }) => {
       toast.success('Registration successful!');
       // Redirect based on user role
       if (user.role === 'admin') {
-        navigate('/admin/dashboard');
+        navigate('/api/admin/dashboard');
       } else {
-        navigate('/dashboard');
+        navigate('/api/dashboard');
       }
       return { success: true };
     } catch (error) {
@@ -96,7 +96,7 @@ export const AuthProvider = ({ children }) => {
 
   const updateProfile = async (profileData) => {
     try {
-      const response = await api.put('/auth/profile', profileData);
+      const response = await api.put('/api/auth/profile', profileData);
       setUser(response.data.user);
       toast.success('Profile updated successfully!');
       return { success: true };
